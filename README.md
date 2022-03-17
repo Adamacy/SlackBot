@@ -25,3 +25,12 @@ You have to download one package. You can do it with this command.
 ```
 pip install schedule
 ```
+
+To run program on docker you have to use this two commands in terminal.
+
+```
+docker build -t slackbot .
+
+docker run slackbot
+
+You have to be in SlackBot directory.

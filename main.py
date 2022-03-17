@@ -3,7 +3,7 @@ import sys
 import requests
 import schedule, time
 
-f = open('SlackBot/url.txt', 'r')
+f = open('url.txt', 'r')
 data = f.read()
 
 uri = f'https://hooks.slack.com/services/{data}'
