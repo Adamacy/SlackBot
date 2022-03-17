@@ -2,7 +2,7 @@
 
 Only thing you have to do is to create file url.txt and paste there last part of webhook URL
 
-To do it add incoming-webhook to your Slack channel. You can use this link: https://test-dg14563.slack.com/services/B037EAX9US1?settings=1
+To do it add incoming-webhook to your Slack channel. You can use this link: https://test-dg14563.slack.com/apps/A0F7XDUAZ-incoming-webhooks?tab=more_info
 
 ## Message content
 
