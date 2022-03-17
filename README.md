@@ -18,3 +18,10 @@ You can choose message content and message title.
 "icon_emoji": ":satellite:",
 ```
 In this line you can choose Bot avatar (icon)
+
+#Packages
+
+You have to download one package. You can do it with this command.
+```
+pip install schedule
+```
