@@ -1,7 +1,6 @@
 FROM python:3
 
 ADD main.py ./
-COPY requirements.txt ./
 COPY url.txt ./
 
 RUN pip install requests
