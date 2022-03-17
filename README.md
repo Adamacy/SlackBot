@@ -30,7 +30,8 @@ To run program on docker you have to use this two commands in terminal.
 
 ```
 docker build -t slackbot .
-
+```
+```
 docker run slackbot
-
+```
 You have to be in SlackBot directory.
