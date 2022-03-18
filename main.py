@@ -1,20 +1,21 @@
 import json
 import sys
 import requests
-import schedule, time
+import time
+import datetime
 
 f = open('url.txt', 'r')
 data = f.read()
 
 uri = f'https://hooks.slack.com/services/{data}'
-message = ("書くレポートがあります") #Message
-title = (f"New Incoming Message :zap:") #Message Title
+message = ("書くレポートがあります")  # Message
+title = (f"New Incoming Message :zap:")  # Message Title
 slack_data = {
     "username": "NotificationBot",
     "icon_emoji": ":satellite:",
     "attachments": [
         {
-                "color": "#9733EE",
+                "color": "#ff00ff",
                 "fields": [
                     {
                         "title": title,
@@ -29,11 +30,13 @@ slack_data = {
 
 def main():
     byte_length = str(sys.getsizeof(slack_data))
-    headers = {'Content-Type': "application/json", 'Content-Length': byte_length}
-    res = requests.post(uri, data=json.dumps(slack_data), headers=headers)
-
-schedule.every().day.at("16:00").do(main) #Time to send message
+    headers = {'Content-Type': "application/json",
+        'Content-Length': byte_length}
+    requests.post(uri, data=json.dumps(slack_data), headers=headers)
+    print('Message Sent')
 
 while True:
-    schedule.run_pending()
-    time.sleep(60)
+    now = datetime.datetime.now().strftime('%H:%M')
+    if now == "16:00":
+        main()
+    time.sleep(30)

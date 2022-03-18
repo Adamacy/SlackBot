@@ -5,5 +5,8 @@ COPY url.txt ./
 
 RUN pip install requests
 RUN pip install schedule
+RUN pip install datetime
 
-CMD [ "python", "./main.py" ]
+ENV TZ=Europe/Warsaw
+
+CMD [ "python", "-u", "./main.py" ]
